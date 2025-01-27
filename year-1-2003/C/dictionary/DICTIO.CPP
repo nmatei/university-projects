@@ -29,16 +29,19 @@ void culoare();
 struct dic_rom_eng
 {
 	char rom1[15], eng1[15], sp1;
+	int i;
 } *s1, a;
 //****************
 struct dic_eng_rom
 {
 	char eng2[15], rom2[15], sp2;
+	int i;
 } *s2, b;
 //****************
 struct save_f
 {
 	char x[15], y[15], sp3;
+	int i;
 } s3[100], c;
 //****************
 char ch1[20];
@@ -56,16 +59,16 @@ void ajutor()
 {
 	culoare(15, 3);
 	gotoxy(19, 5);
-	cprintf("������������������ Ajutor ����������������ͻ");
+	cprintf("╔═════════════════ Ajutor ═════════════════╗");
 	for (i = 0; i < 16; i++)
 	{
 		gotoxy(19, 6 + i);
-		cprintf("�");
+		cprintf("║");
 		gotoxy(62, 6 + i);
-		cprintf("�");
+		cprintf("║");
 	}
 	gotoxy(19, 22);
-	cprintf("������������������������������������������ͼ");
+	cprintf("╚══════════════════════════════════════════╝");
 	culoare(0, 3);
 	gotoxy(20, 6);
 	cprintf(" Esc - pentru a iesi din orice subprogram ");
@@ -176,7 +179,7 @@ void autor()
 	cprintf("��   ��  ��   ���    ���   �����  ��  ��  �����");
 	culoare(15, 1);
 	gotoxy(20, 20);
-	cprintf("E-mail: matei_nick@yahoo.com ");
+	cprintf("Web site: nmatei.github.io");
 	gotoxy(10, 22);
 	cprintf("Acest program a fost facut in limbajul de programare 'C' ");
 	gotoxy(10, 23);
@@ -236,19 +239,19 @@ void save1()
 {
 	culoare(15, 10);
 	gotoxy(10, 4);
-	cprintf("�������������� Salvare (+/-) Sortare ����������ͻ");
+	cprintf("╔════════ Salvare (+/-) Sortare ═════════╗");
 	gotoxy(10, 5);
-	cprintf("�                                               �");
+	cprintf("║                                                                                   ║");
 	gotoxy(10, 6);
-	cprintf("�                                               �");
+	cprintf("║                                                                                   ║");
 	gotoxy(10, 7);
-	cprintf("�                                               �");
+	cprintf("║                                                                                   ║");
 	gotoxy(10, 8);
-	cprintf("�                                               �");
+	cprintf("║                                                                                   ║");
 	gotoxy(10, 9);
-	cprintf("�                                               �");
+	cprintf("║                                                                                   ║");
 	gotoxy(10, 10);
-	cprintf("�����������������������������������������������ͼ");
+	cprintf("╚═════════════════════════════╝");
 	culoare(4, 10);
 	gotoxy(12, 6);
 	cprintf("Doriti sa sortati datele din fisier (d/n)?: ");
@@ -282,23 +285,23 @@ void dir()
 	clrscr();
 	culoare(15, 4);
 	gotoxy(15, 2);
-	cprintf("��������������� Directorii ������������ͻ");
+	cprintf("╔══════════ Directorii ══════╗");
 	gotoxy(15, 3);
-	cprintf("�                                       �");
+	cprintf("║                                                               ║");
 	gotoxy(15, 4);
-	cprintf("� Introduceti numele fisierului de tip  �");
+	cprintf("║ Introduceti numele fisierului de tip   ║");
 	gotoxy(15, 5);
-	cprintf("� (*.txt) in care doriti sa salvati     �");
+	cprintf("║ (*.txt) in care doriti sa salvati            ║");
 	gotoxy(15, 6);
-	cprintf("� cuvintele traduse :                   �");
+	cprintf("║ cuvintele traduse :                              ║");
 	gotoxy(15, 7);
-	cprintf("�                                       �");
+	cprintf("║                                                            ║");
 	gotoxy(15, 8);
-	cprintf("�                                       �");
+	cprintf("║                                                            ║");
 	gotoxy(15, 9);
-	cprintf("�                                       �");
+	cprintf("║                                                            ║");
 	gotoxy(15, 10);
-	cprintf("���������������������������������������ͼ");
+	cprintf("╚════════════════════╝");
 	culoare(15, 10);
 	gotoxy(22, 8);
 	cprintf("                          ");
@@ -366,38 +369,38 @@ void fereastra()
 	for (i = 0; i < 5; i++)
 	{
 		gotoxy(13, 3 + i);
-		cprintf("�                                        �");
+		cprintf("║                                        ║");
 	}
 	gotoxy(13, 2);
-	cprintf("����������������������������������������ͻ");
+	cprintf("╔════════════════════════════════════════╗");
 	gotoxy(13, 8);
-	cprintf("����������������������������������������ͼ");
+	cprintf("╚════════════════════════════════════════╝");
 	culoare(15, 10);
 	gotoxy(19, 6);
 	cprintf("                              ");
 	culoare(15, 15);
 	gotoxy(13, 10);
-	cprintf("����������������������������������������ͻ");
+	cprintf("╔═══════════════════╦════════════════════╗");
 	gotoxy(13, 21);
-	cprintf("����������������������������������������ͼ");
+	cprintf("╚═══════════════════╩════════════════════╝");
 	for (i = 0; i < 10; i++)
 	{
 		gotoxy(13, 11 + i);
-		cprintf("�                   ");
+		cprintf("║                   ");
 		gotoxy(54, 11 + i);
-		cprintf("�");
+		cprintf("║");
 		gotoxy(33, 11 + i);
-		cprintf("�                    ");
+		cprintf("║                    ");
 	}
 	culoare(0, 15);
 	gotoxy(57, 10);
-	cprintf("����������������ͻ");
+	cprintf("╔════════════════╗");
 	gotoxy(57, 21);
-	cprintf("����������������ͼ");
+	cprintf("╚════════════════╝");
 	for (i = 0; i < 10; i++)
 	{
 		gotoxy(57, 11 + i);
-		cprintf("�                �");
+		cprintf("║                ║");
 	}
 	culoare(4, 15);
 	gotoxy(59, 10);
@@ -425,19 +428,19 @@ void eng_rom()
 	m = j1;
 	culoare(15, 4);
 	gotoxy(57, 2);
-	cprintf("�������������ͻ");
+	cprintf("╔════════╗");
 	gotoxy(57, 3);
-	cprintf("� If you want �");
+	cprintf("║ If you want    ║");
 	gotoxy(57, 4);
-	cprintf("� to copy in  �");
+	cprintf("║ to copy in      ║");
 	gotoxy(57, 5);
-	cprintf("�             �");
+	cprintf("║                       ║");
 	gotoxy(57, 6);
-	cprintf("�             �");
+	cprintf("║                       ║");
 	gotoxy(57, 7);
-	cprintf("�   <Enter>   �");
+	cprintf("║   <Enter>       ║");
 	gotoxy(57, 8);
-	cprintf("�������������ͼ");
+	cprintf("╚════════╝");
 	gotoxy(59, 5);
 	cprintf("%s", fisier);
 	do
@@ -560,19 +563,19 @@ void rom_eng()
 	m = j1;
 	culoare(15, 4);
 	gotoxy(57, 2);
-	cprintf("���������������ͻ");
+	cprintf("╔════════╗");
 	gotoxy(57, 3);
-	cprintf("� Daca doriti   �");
+	cprintf("║ Daca doriti    ║");
 	gotoxy(57, 4);
-	cprintf("� sa copiati in �");
+	cprintf("║ sa copiati in   ║");
 	gotoxy(57, 5);
-	cprintf("�               �");
+	cprintf("║                       ║");
 	gotoxy(57, 6);
-	cprintf("�               �");
+	cprintf("║                       ║");
 	gotoxy(57, 7);
-	cprintf("�    <Enter>    �");
+	cprintf("║    <Enter>      ║");
 	gotoxy(57, 8);
-	cprintf("���������������ͼ");
+	cprintf("╚════════╝");
 	gotoxy(59, 5);
 	cprintf("%s", fisier);
 	do
@@ -689,12 +692,12 @@ void add()
 	for (i = 0; i < 5; i++)
 	{
 		gotoxy(18, 5 + i);
-		cprintf("�                                        �");
+		cprintf("║                                        ║");
 	}
 	gotoxy(18, 4);
-	cprintf("����������������������������������������ͻ");
+	cprintf("╔════════════════════════════════════════╗");
 	gotoxy(18, 10);
-	cprintf("����������������������������������������ͼ");
+	cprintf("╚════════════════════════════════════════╝");
 	culoare(15, 10);
 	gotoxy(28, 6);
 	cprintf("                              ");
@@ -838,12 +841,12 @@ void cut_R()
 	for (i = 0; i < 5; i++)
 	{
 		gotoxy(18, 3 + i);
-		cprintf("�                                        �");
+		cprintf("║                                        ║");
 	}
 	gotoxy(18, 2);
-	cprintf("����������������������������������������ͻ");
+	cprintf("╔════════════════════════════════════════╗");
 	gotoxy(18, 8);
-	cprintf("����������������������������������������ͼ");
+	cprintf("╚════════════════════════════════════════╝");
 	gotoxy(24, 4);
 	cprintf(" Doriti sa taiati -> ");
 	cputs(s1[j].rom1);
@@ -887,9 +890,9 @@ void buton()
 	_setcursortype(_NOCURSOR);
 	culoare(0, 7);
 	gotoxy(25, 6);
-	cprintf("�  DA  �");
+	cprintf("║  DA  ║");
 	gotoxy(40, 6);
-	cprintf("�  NU  �");
+	cprintf("║  NU  ║");
 	culoare(0, 10);
 	if (j1 == 1)
 	{
@@ -1039,14 +1042,14 @@ void meniu1()
 {
 	culoare(15, 1);
 	gotoxy(1, 4);
-	cprintf("������������������������������������������������������������������������������ͻ");
+	cprintf("╔══════════════════════════════════════════════════════════════════════════════╗");
 	culoare(0, 7);
 	gotoxy(3, 1);
-	cprintf("�����������������������������������������ͻ");
+	cprintf("╔══════╦═══════╦═════╦════╗");
 	gotoxy(3, 2);
-	cprintf("� Dictionar � Modificare � Ajutor � Autor �");
+	cprintf("║ Dictionar ║ Modificare ║ Ajutor ║ Autor ║");
 	gotoxy(3, 3);
-	cprintf("�����������������������������������������ͼ");
+	cprintf("╚══════╩═══════╩═ ═══╩════╝");
 	culoare(0, 10);
 	gotoxy(4, 2);
 	if (k == 1)
@@ -1090,21 +1093,21 @@ void meniu1()
 	for (i = 0; i < 4; i++)
 	{
 		gotoxy(2, 5 + i);
-		cprintf("����������������������������������������");
+		cprintf("████████████████████████████████████████");
 	}
 	if (k == 1)
 	{
 		culoare(0, 15);
 		gotoxy(3, 3);
-		cprintf("�           ����ͻ");
+		cprintf("║           ╚════╗");
 		gotoxy(3, 4);
-		cprintf("� Roman - Englez �");
+		cprintf("║ Roman - Englez ║");
 		gotoxy(3, 5);
-		cprintf("� Englez - Roman �");
+		cprintf("║ Englez - Roman ║");
 		gotoxy(3, 6);
-		cprintf("� Iesire < Esc > �");
+		cprintf("║ Iesire < Esc >     ║");
 		gotoxy(3, 7);
-		cprintf("����������������ͼ");
+		cprintf("╚══════════╝");
 		culoare(0, 10);
 		gotoxy(4, 4);
 		if (k1 == 1)
@@ -1148,15 +1151,15 @@ void meniu1()
 	{
 		culoare(0, 15);
 		gotoxy(15, 3);
-		cprintf("�            ��ͻ");
+		cprintf("║            ╚══╗");
 		gotoxy(15, 4);
-		cprintf("� => Adaugare   �");
+		cprintf("║ => Adaugare ║");
 		gotoxy(15, 5);
-		cprintf("� => Stergere   �");
+		cprintf("║ => Stergere   ║");
 		gotoxy(15, 6);
-		cprintf("� => Directorii �");
+		cprintf("║ => Directorii ║");
 		gotoxy(15, 7);
-		cprintf("���������������ͼ");
+		cprintf("╚════════╝");
 		culoare(0, 10);
 		gotoxy(16, 4);
 		if (k1 == 1)
@@ -1205,15 +1208,15 @@ void meniu()
 	clrscr();
 	_setcursortype(_NOCURSOR);
 	gotoxy(1, 4);
-	cprintf("������������������������������������������������������������������������������ͻ");
+	cprintf("╔══════════════════════════════════════════════════════════════════════════════╗");
 	for (i = 0; i < 19; i++)
 	{
 		gotoxy(1, 5 + i);
-		cprintf("�");
+		cprintf("║");
 		gotoxy(80, 5 + i);
-		cprintf("�");
+		cprintf("║");
 	}
-	cprintf("������������������������������������������������������������������������������ͼ");
+	cprintf("╚══════════════════════════════════════════════════════════════════════════════╝");
 	culoare(0, 15);
 	gotoxy(1, 1);
 	for (i = 0; i < 4; i++)
